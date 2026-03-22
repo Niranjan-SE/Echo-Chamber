@@ -8,12 +8,15 @@ const { startRssFetcher } = require('./src/services/rssFetcher');
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors());
 app.use(express.json());
 
 // Routes
 app.use('/api/submissions', submissionRoutes);
 app.use('/api/articles',    articleRoutes);
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok', time: new Date() }));
