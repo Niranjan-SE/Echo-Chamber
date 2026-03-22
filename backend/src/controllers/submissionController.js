@@ -34,12 +34,16 @@ async function submitUrl(req, res) {
 
     // Scrape
     let scraped;
-    try {
-      scraped = await scrapeUrl(url);
-    } catch (err) {
-      await db.query(`UPDATE submissions SET status = 'failed' WHERE id = $1`, [submissionId]);
-      return res.status(422).json({ error: 'Could not scrape this URL', detail: err.message });
-    }
+try {
+  scraped = await scrapeUrl(url);
+} catch (err) {
+  // Don't fail — analyze using just the URL as context
+  scraped = {
+    comments: `Analyze the likely discourse, bias patterns and echo chamber characteristics of content from this URL: ${url}. Based on the URL structure and domain, predict the opinion diversity, potential bias clusters, and missing perspectives that would typically appear in this type of content.`,
+    platform: detectPlatform(url),
+    title: url,
+  };
+}
 
     // Update submission with title/platform
     await db.query(
