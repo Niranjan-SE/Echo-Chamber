@@ -257,10 +257,10 @@ export default function CommunityPage() {
         </div>
 
         {/* Stats */}
-        <div style={{ display: "grid",
-gridTemplateColumns: "repeat(3, 1fr)",
-gap: 8,
-marginBottom: 18, }}>
+        <div style={{ display: "flex",
+gap: 10,
+marginBottom: 22,
+flexWrap: "wrap", }}>
           {[
             { label: "Total Analyzed", value: totalAnalyzed, color: "#3b82f6" },
             { label: "High Echo",      value: highEcho,      color: "#dc2626" },
@@ -270,7 +270,8 @@ marginBottom: 18, }}>
               background: "#0f0f0f", border: "1px solid #1a1a1a",
               borderRadius: 10, padding: "12px 14px",
               display: "flex", flexDirection: "column", gap: 5,
-                         }}>
+              minWidth: 130,
+              flex: "1 1 130px",            }}>
               <span style={{ fontSize: 10, color: "#383838", fontWeight: 600, letterSpacing: "0.07em" }}>
                 {s.label.toUpperCase()}
               </span>
