@@ -478,7 +478,10 @@ export default function EchoChamber() {
         </div>
 
         {/* Stats */}
-        <div style={{ display: "flex", gap: 10, marginBottom: 22 }}>
+        <div style={{ display: "grid",
+gridTemplateColumns: "repeat(3, 1fr)",
+gap: 8,
+marginBottom: 18, }}>
           {[
             { label: "Articles",       value: articles.length,                                       color: "#3b82f6" },
             { label: "Analyzed",       value: analyzedArticles.length,                               color: "#22c55e" },
@@ -490,7 +493,7 @@ export default function EchoChamber() {
               background: "#0f0f0f", border: "1px solid #1a1a1a",
               borderRadius: 10, padding: "12px 14px",
               display: "flex", flexDirection: "column", gap: 5,
-              minWidth: 120, flex: "1 1 120px",            }}>
+                         }}>
               <span style={{ fontSize: 10, color: "#383838", fontWeight: 600, letterSpacing: "0.07em" }}>
                 {stat.label.toUpperCase()}
               </span>
