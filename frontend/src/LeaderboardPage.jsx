@@ -162,8 +162,7 @@ export default function LeaderboardPage() {
         position: "sticky", top: 0, zIndex: 50,
         background: "#0c0c0cf0", backdropFilter: "blur(16px)",
         borderBottom: "1px solid #1a1a1a",
-        padding: "0 28px", height: 62,
-        display: "flex", alignItems: "center", gap: 16,
+        padding: "0 16px", height: "auto", minHeight: 56, flexWrap: "wrap", paddingTop: 8, paddingBottom: 8,        display: "flex", alignItems: "center", gap: 16,
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => navigate("/")}>
           <div style={{ width: 34, height: 34, borderRadius: 9, background: "#dc2626", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -188,7 +187,7 @@ export default function LeaderboardPage() {
         </div>
       </nav>
 
-      <main style={{ padding: "26px 28px 60px", maxWidth: 860, margin: "0 auto" }}>
+      <main style={{ padding: "16px 14px 60px", maxWidth: 860, margin: "0 auto" }}>
 
         {/* Header */}
         <div style={{ marginBottom: 28 }}>

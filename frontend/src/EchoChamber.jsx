@@ -214,7 +214,7 @@ function Toast({ message, onClose }) {
     <div style={{
       position: "fixed", bottom: 28, right: 28, zIndex: 999,
       background: "#181818", border: "1px solid #2a2a2a",
-      borderRadius: 10, padding: "14px 20px",
+      borderRadius: 10, padding: "12px 14px",
       display: "flex", alignItems: "center", gap: 12,
       animation: "slideUp 0.25s ease",
       boxShadow: "0 8px 32px rgba(0,0,0,0.6)",
@@ -381,8 +381,7 @@ export default function EchoChamber() {
         position: "sticky", top: 0, zIndex: 50,
         background: "#0c0c0cf0", backdropFilter: "blur(16px)",
         borderBottom: "1px solid #1a1a1a",
-        padding: "0 28px", height: 62,
-        display: "flex", alignItems: "center", gap: 16,
+        padding: "0 16px", height: "auto", minHeight: 56, flexWrap: "wrap", paddingTop: 8, paddingBottom: 8,        display: "flex", alignItems: "center", gap: 16,
       }}>
         {/* Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0, cursor: "pointer" }}
@@ -454,7 +453,7 @@ export default function EchoChamber() {
       </nav>
 
       {/* ── MAIN ── */}
-      <main style={{ padding: "26px 28px 60px" }}>
+      <main style={{ padding: "16px 14px 60px" }}>
 
         {/* Page header */}
         <div style={{ marginBottom: 24, display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
@@ -489,10 +488,9 @@ export default function EchoChamber() {
           ].map(stat => (
             <div key={stat.label} style={{
               background: "#0f0f0f", border: "1px solid #1a1a1a",
-              borderRadius: 10, padding: "14px 20px",
+              borderRadius: 10, padding: "12px 14px",
               display: "flex", flexDirection: "column", gap: 5,
-              width: 160, flexShrink: 0,
-            }}>
+              minWidth: 120, flex: "1 1 120px",            }}>
               <span style={{ fontSize: 10, color: "#383838", fontWeight: 600, letterSpacing: "0.07em" }}>
                 {stat.label.toUpperCase()}
               </span>
@@ -506,7 +504,7 @@ export default function EchoChamber() {
         {/* Filter bar */}
         <div style={{
           background: "#0f0f0f", border: "1px solid #1a1a1a",
-          borderRadius: 12, padding: "14px 20px", marginBottom: 20,
+          borderRadius: 12, padding: "12px 14px", marginBottom: 20,
           display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap",
         }}>
           {/* Search */}
@@ -605,8 +603,7 @@ export default function EchoChamber() {
         {!loading && (
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(420px, 1fr))",
-            gap: 14,
+            gridTemplateColumns: "repeat(auto-fill, minmax(min(420px, 100%), 1fr))",            gap: 14,
             animation: "fadeIn 0.3s ease",
           }}>
             {sortedFiltered.length > 0

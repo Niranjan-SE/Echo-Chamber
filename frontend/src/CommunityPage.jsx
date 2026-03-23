@@ -219,8 +219,7 @@ export default function CommunityPage() {
         position: "sticky", top: 0, zIndex: 50,
         background: "#0c0c0cf0", backdropFilter: "blur(16px)",
         borderBottom: "1px solid #1a1a1a",
-        padding: "0 28px", height: 62,
-        display: "flex", alignItems: "center", gap: 16,
+        padding: "0 16px", height: "auto", minHeight: 56, flexWrap: "wrap", paddingTop: 8, paddingBottom: 8,        display: "flex", alignItems: "center", gap: 16,
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }} onClick={() => navigate("/")}>
           <div style={{ width: 34, height: 34, borderRadius: 9, background: "#dc2626", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -245,7 +244,7 @@ export default function CommunityPage() {
         </div>
       </nav>
 
-      <main style={{ padding: "26px 28px 60px", maxWidth: 900, margin: "0 auto" }}>
+      <main style={{ padding: "16px 14px 60px", maxWidth: 900, margin: "0 auto" }}>
 
         {/* Header */}
         <div style={{ marginBottom: 24 }}>
@@ -266,10 +265,9 @@ export default function CommunityPage() {
           ].map(s => (
             <div key={s.label} style={{
               background: "#0f0f0f", border: "1px solid #1a1a1a",
-              borderRadius: 10, padding: "14px 20px",
+              borderRadius: 10, padding: "12px 14px",
               display: "flex", flexDirection: "column", gap: 5,
-              width: 160, flexShrink: 0,
-            }}>
+              minWidth: 120, flex: "1 1 120px",            }}>
               <span style={{ fontSize: 10, color: "#383838", fontWeight: 600, letterSpacing: "0.07em" }}>
                 {s.label.toUpperCase()}
               </span>
