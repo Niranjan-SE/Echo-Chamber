@@ -8,7 +8,6 @@ const SOURCES = {
   "The Hindu":       { color: "#22c55e", bg: "#052e16", short: "TH" },
   "NDTV":            { color: "#3b82f6", bg: "#172554", short: "ND" },
   "Indian Express":  { color: "#f97316", bg: "#431407", short: "IE" },
-  "NewsLaundry":     { color: "#ec4899", bg: "#500724", short: "NL" },
 };
 
 const TAGS = ["All", "Politics", "Economy", "Tech", "Environment", "World", "Media", "General"];

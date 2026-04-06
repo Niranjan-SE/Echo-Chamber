@@ -11,7 +11,6 @@ const RSS_FEEDS = [
   { name: 'The Hindu',      url: 'https://www.thehindu.com/feeder/default.rss' },
   { name: 'NDTV',           url: 'https://feeds.feedburner.com/ndtvnews-top-stories' },
   { name: 'Indian Express', url: 'https://indianexpress.com/feed/' },
-  { name: 'NewsLaundry',    url: 'https://www.newslaundry.com/feed' },
 ];
 
 // Simple keyword → tag mapper
